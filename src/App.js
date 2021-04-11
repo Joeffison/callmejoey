@@ -1,13 +1,15 @@
 import './App.css';
+import 'animate.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-          <h1>Software Engineer</h1>
-      </header>
-    </div>
-  );
-}
+import { Home } from "./home";
+import { AboutMe } from "./aboutme";
+
+const App = () => (
+  <div className="App">
+    <Home />
+    <AboutMe />
+  </div>
+);
 
 export default App;
