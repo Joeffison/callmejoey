@@ -9,8 +9,11 @@ trim_trailing_whitespace = true
 indent_style = space
 charset = utf-8
 
-[*.{py,scss,css}]
+[*.{py}]
 indent_size = 4
+
+[*.{scss,css}]
+indent_size = 2
 
 # Tab indentation for Makefiles
 [src/Makefile]

@@ -1,0 +1,5 @@
+@media screen and (max-width: calc(#{map-get($grid-breakpoints, "md")} - 1px)) {
+  .aboutme-image {
+    display: none;
+  }
+}

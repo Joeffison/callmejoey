@@ -1,0 +1,14 @@
+.App-homepage {
+  background-color: #282c34;
+  color: white;
+
+  .home-image {
+    width: 50vmin;
+  }
+
+  @media screen and (min-width: map-get($grid-breakpoints, "md")) {
+    .home-image {
+      display: none;
+    }
+  }
+}

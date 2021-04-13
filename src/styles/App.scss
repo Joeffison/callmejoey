@@ -1,0 +1,25 @@
+@use "sass:map";
+@import "variables";
+@import "animations";
+@import "global";
+@import "homepage";
+@import "about_me";
+
+.App-main-title {
+  font-size: clamp(16px, 7rem, 10vw);
+}
+
+.App-icon-hoverable {
+  color: orange !important;
+  border-color: white !important;
+}
+
+.App-icon-hoverable:hover, .App-icon-hoverable.active {
+  color: white !important;
+  background-color: orange !important;
+  border-color: white !important;
+}
+
+.textsize {
+  font-size: calc(10px + 1vmin) !important;
+}

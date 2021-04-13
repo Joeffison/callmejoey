@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.scss';
 import 'animate.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 

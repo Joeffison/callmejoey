@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.App-page {
+  background-color: #f4f6fa;
+  min-height: 100vh;
+  height: 100vh;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+  overflow: hidden;
+}
+
+p {
+  font-size: calc(10px + 1.3vmin) !important;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+a.fa-stack {
+  > svg:nth-child(1) {
+    color: orange;
+  }
+
+  > svg:nth-child(2) {
+    color: white;
+  }
+
+  &:hover {
+    > svg:nth-child(1) {
+      color: white;
+    }
+
+    > svg:nth-child(2) {
+      color: orange;
+    }
+  }
+}
+
+.image-responsive {
+  max-width: 33vmin !important;
+}
