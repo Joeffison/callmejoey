@@ -1,22 +1,6 @@
-import { Radar, RadarChart, PolarGrid, XAxis, PolarAngleAxis, Tooltip, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-
-const Skills = () => (
-  <div className="w-100">
-    <h2>
-      Highlights
-    </h2>
-    <p className="text-justify">
-      I have worked with many technologies
-      and below you can find those I am currently working with.
-    </p>
-    <RadarExample data={skillData}></RadarExample>
-  </div>
-)
-
-export default Skills;
+import { ResponsiveContainer, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Tooltip } from 'recharts';
 
 const factor = .9;
-
 const skillData = [
   {
     subject: 'Python',
@@ -55,16 +39,25 @@ const skillData = [
   },
 ];
 
-const RadarExample = ({ data }) => {
-    return (
-      <ResponsiveContainer className="textsize" width="100%" height="100%" aspect={3}>
-        <RadarChart cx="50%" cy="50%" outerRadius="70%" data={data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" />
-          <PolarRadiusAxis angle={90} tick={false} domain={[0, 100]} />
-          <Tooltip></Tooltip>
-          <Radar name="Skill" dataKey="A" stroke="darkorange" fill="orange" fillOpacity={0.93} />
-        </RadarChart>
-      </ResponsiveContainer>
-    );
-}
+const Skills = () => (
+  <div className="w-100">
+    <h2> Highlights </h2>
+
+    <p className="text-justify">
+      I have worked with many technologies
+      and below you can find those I am currently working with.
+    </p>
+
+    <ResponsiveContainer className="textsize" width="100%" height="100%" aspect={3}>
+      <RadarChart cx="50%" cy="50%" outerRadius="70%" data={skillData}>
+        <PolarGrid />
+        <PolarAngleAxis dataKey="subject" />
+        <PolarRadiusAxis angle={90} tick={false} domain={[0, 100]} />
+        <Tooltip></Tooltip>
+        <Radar name="Skill" dataKey="A" stroke="darkorange" fill="orange" fillOpacity={0.93} />
+      </RadarChart>
+    </ResponsiveContainer>
+  </div>
+)
+
+export default Skills;

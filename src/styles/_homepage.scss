@@ -1,14 +1,57 @@
+$image_width: 365px;
+$image_height: calc(380px/4);
+@keyframes ping_pong{
+  0% {
+    left: 0vw;
+    bottom: 0vh;
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  33%{
+    left: 100vw;
+    bottom: 33vh;
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateY(180deg);
+    opacity: 1;
+  }
+  66%{
+    left: 0vw;
+    bottom: 66vh;
+    transform: rotateY(180deg);
+    opacity: 1;
+  }
+  70% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100%{
+    left: 100vw;
+    bottom: 100vh;
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
 .App-homepage {
   background-color: #282c34;
   color: white;
+  min-height: 100vh;
 
   .home-image {
     width: 50vmin;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: ping_pong 3s linear;
+    opacity: 0;
   }
 
   @media screen and (min-width: map-get($grid-breakpoints, "md")) {
     .home-image {
-      display: none;
+      animation: none;
     }
   }
 }

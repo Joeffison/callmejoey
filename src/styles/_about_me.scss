@@ -1,5 +1,11 @@
-@media screen and (max-width: calc(#{map-get($grid-breakpoints, "md")} - 1px)) {
+.App-aboutme {
   .aboutme-image {
-    display: none;
+    transform: rotateY(180deg);
+  }
+
+  @media screen and (max-width: calc(#{map-get($grid-breakpoints, "md")} - 1px)) {
+    .aboutme-image {
+      display: none;
+    }
   }
 }
